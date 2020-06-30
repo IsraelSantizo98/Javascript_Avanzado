@@ -39,8 +39,6 @@ for (let i = 0; i < personas.length; i++) {
 }
 console.log(`En total todos tiene ${acum} libros`);
 /*Forma moderna de realizar lo de arriba*/
-const reducer = (acum, personas) => {
-  return acum + personas.cantidadDeLibros;
-};
+const reducer = (acum, { cantidadDeLibros }) => acum + cantidadDeLibros;
 var totalDeLibros = personas.reduce(reducer, 0);
 console.log(`En total todos tiene ${acum} libros`);
